@@ -226,3 +226,101 @@ JOIN departments ON dept_avg.department_id = departments.id;
 ✅ *Practice:* Find departments with an average salary above a threshold.  
 
 ---
+
+. **Retrieve all campaign names created in the last 3 days**  
+   ✅ **Correct**  
+   ```sql
+   SELECT `campaign_name` FROM `campaigns` WHERE created_at > NOW() - INTERVAL 3 DAY;
+   ```
+
+2. **List all phone numbers from `campaign_details` that are linked to a specific `campaign_id`**  
+   ❌ **Incorrect COUNT usage (it counts total rows, not phone numbers)**  
+   ✅ **Fixed Query**  
+   ```sql
+   SELECT `campaign_id`, COUNT(`phone_number`) AS phone_count FROM `campaign_details` GROUP BY `campaign_id`;
+   ```
+
+3. **Get the total count of campaigns in the database**  
+   ❌ **Incorrect COUNT syntax (single quotes around column names are incorrect)**  
+   ✅ **Fixed Query**  
+   ```sql
+   SELECT COUNT(`campaign_name`) AS total FROM `campaigns`;
+   ```
+
+4. **Find all unique phone numbers from `log` that have a status of `1`**  
+   ❌ **Wrong table name (`log` instead of `message_logs`) and incorrect WHERE condition (`description` instead of `status`)**  
+   ✅ **Fixed Query**  
+   ```sql
+   SELECT DISTINCT `phone_number` FROM `message_logs` WHERE `status` = 1;
+   ```
+
+5. **Find the number of campaigns created each month**  
+   ❌ **Sorting issue (Month names are not sorted correctly in queries without sorting by year and month number)**  
+   ✅ **Fixed Query**  
+   ```sql
+   SELECT COUNT(`campaign_name`) AS campaign_count, 
+          DATE_FORMAT(`created_at`, '%Y-%m') AS month 
+   FROM `campaigns` 
+   GROUP BY DATE_FORMAT(`created_at`, '%Y-%m') 
+   ORDER BY DATE_FORMAT(`created_at`, '%Y-%m');
+   ```
+
+6. **Retrieve the latest 10 entries from `message_logs`**  
+   ❌ **Wrong table name (`log` instead of `message_logs`) and wrong ordering (ASC instead of DESC)**  
+   ✅ **Fixed Query**  
+   ```sql
+   SELECT * FROM `message_logs` ORDER BY `id` DESC LIMIT 10;
+   ```
+
+7. **Find the top 3 campaigns with the highest number of associated phone numbers**  
+   ✅ **Correct but can be optimized for clarity**  
+   ```sql
+   SELECT `campaign_id`, COUNT(`phone_number`) AS phone_count 
+   FROM `campaign_details` 
+   GROUP BY `campaign_id` 
+   ORDER BY phone_count DESC 
+   LIMIT 3;
+   ```
+
+8. **Get the campaign with the highest number of associated phone numbers**  
+   ✅ **Correct**  
+   ```sql
+   SELECT `campaign_id`, COUNT(`phone_number`) AS phone_count 
+   FROM `campaign_details` 
+   GROUP BY `campaign_id` 
+   ORDER BY phone_count DESC 
+   LIMIT 1;
+   ```
+
+9. **Get the second highest campaign with the most associated phone numbers**  
+   ✅ **Correct**  
+   ```sql
+   SELECT `campaign_id`, COUNT(`phone_number`) AS phone_count 
+   FROM `campaign_details` 
+   GROUP BY `campaign_id` 
+   ORDER BY phone_count DESC 
+   LIMIT 1 OFFSET 1;
+   ```
+
+10. **Get all templates where `media_url` is `NULL`**  
+   ❌ **Wrong NULL check (`"NULL"` is a string, use `IS NULL`)**  
+   ✅ **Fixed Query**  
+   ```sql
+   SELECT * FROM `templates` WHERE `media_url` IS NULL;
+   ```
+
+### **Key Fixes:**
+- Used proper **NULL** checking (`IS NULL` instead of `"NULL"`).
+- Ensured correct **table names** (`message_logs` instead of `log`).
+- Fixed **COUNT syntax** (removed incorrect single quotes around column names).
+- Used **DESC sorting** where needed (for latest logs and highest counts).
+- Improved **date formatting and sorting** to ensure correct month order.  
+
+Now your queries should work correctly! 🚀
+9. Retrieve all phone numbers that exist in `log` but not in `campaign_details`.  
+10. Find the most frequently used template in the `log` table.  
+11. Find the campaign that has sent the highest number of messages.  
+12. Get the campaign(s) with the lowest number of phone numbers.  
+13. Retrieve the second highest `campaign_id` from the `campaigns` table.  
+14. Find the second most used template from the `templates` table.  
+15. Get a list of all campaigns along with their total message count, sorted in descending order.  
