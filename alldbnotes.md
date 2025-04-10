@@ -2569,34 +2569,3 @@ WHERE salary < (SELECT MAX(salary) FROM Employees)
 ORDER BY salary DESC
 LIMIT 1;
 ```
-
-2. Retrieve duplicate records from a table.  
-3. Explain and write a query to use a **self join**.  
-4. Write a query to find the **nth highest salary** in a table.  
-5. Write a query to get the employee with the highest salary in each department.  
-6. How would you find rows that exist in one table but not in another?  
-7. Write a query to fetch all employees who joined in the last 6 months.  
-8. How would you delete duplicate rows but keep one copy in the table?  
-9. Retrieve the **top 3 highest salaries** from a table.  
-10. Write a query to fetch the number of employees in each department using **GROUP BY**.  
-11. Write a query to find employees with the same salary in a table.  
-12. Explain how **indexes** improve query performance and write a query to create one.  
-13. Write a query using a **CASE** statement to categorize employees based on their salary range.  
-14. How do you fetch the first 10 rows and skip the first 5 in SQL?  
-15. Retrieve all records where a column contains a specific substring using `LIKE`.  
-16. Write a query to fetch the current date and time in SQL.  
-17. Write a query to find records that have NULL values in a specific column.  
-18. Explain **transactions** and write a query that uses `BEGIN`, `COMMIT`, and `ROLLBACK`.  
-19. Write a query to fetch the highest salary in each department using a **correlated subquery**.  
-20. Retrieve records that fall within a specific date range.  
-21. Write a query to get the difference between two date columns.  
-22. Explain the difference between `INNER JOIN` and `LEFT JOIN` with an example.  
-23. Write a query to find employees who report to the same manager using a **self join**.  
-24. How would you optimize a query fetching millions of rows with specific conditions?  
-25. Write a query to combine the results of two SELECT statements using **UNION**.  
-26. What is the difference between a **view** and a **materialized view**?  
-27. Write a query to count distinct values in a column.  
-28. Write a query to fetch employees whose names start and end with the same letter.  
-29. How would you design a database to prevent duplicate entries?  
-30. Write a query to implement pagination in SQL.  
-
