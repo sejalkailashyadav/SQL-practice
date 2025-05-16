@@ -1,6 +1,6 @@
 # SQL-Practice
 Aggregate functions ?
-SQL aggregation function is used to perform the calculations on multiple rows of a single column of a table. It returns a single value.
+SQL aggregation function is used to perform the calculations on multiple rows of a single column of a table. It returns a single value..
 
 ![image](https://user-images.githubusercontent.com/127746039/229786223-d536c148-b30a-4f7b-aace-f0d507508b83.png)
 
