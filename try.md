@@ -44,9 +44,21 @@
 
 ---
 
+###    **Q2. Department-wise Average Salary (Current Only)**
+
+> Write a query to get the **average current salary** per employees.name.
+
+select AVG(salaries.salary) as avg_sal , employees.name FROM employees JOIN salaries on employees.emp_id=salaries.emp_id JOIN departments on employees.dept_id=departments.dept_id;
+![image](https://github.com/user-attachments/assets/bdb9c136-84b3-4812-863f-4a6fdec06dd2)
+
+---
 ### 🔍 **Q3. Longest Tenured Employee per Department**
 
 > Write a query to find the **employee who has been in each department the longest**.
+
+*select MAX(employees.hire_date) as tenured_emp , departments.dept_name FROM departments JOIN employees  on employees.dept_id=departments.dept_id;
+
+![image](https://github.com/user-attachments/assets/d0c93d8c-ddb0-4e8d-9177-94553930d7ba)
 
 ---
 
