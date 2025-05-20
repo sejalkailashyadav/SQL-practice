@@ -33,6 +33,8 @@
 ### 🔍 **Q1. Latest Salary per Employee**
 
 > Write a SQL query to get the **latest salary** of each employee.
+*  select employees.name,salaries.salary FROM salaries JOIN employees on salaries.emp_id=employees.emp_id;
+![image](https://github.com/user-attachments/assets/9f9ee43c-4260-4f9b-9b36-6688dcdf407f)
 
 ---
 
