@@ -68,11 +68,18 @@ select AVG(salaries.salary) as avg_sal , employees.name FROM employees JOIN sala
 
 ---
 
-### 🔍 **Q5. Second Highest Current Salary**
+
+###    **Q5. Second Highest Current Salary**
 
 > Write a query to get the **second highest current salary** among all employees.
 
 ---
+![image](https://github.com/user-attachments/assets/15019e60-eee1-4f90-a043-d369921b82d3)
+
+
+select salaries.salary , employees.name FROM employees JOin salaries on salaries.emp_id=employees.emp_id;
+
+
 
 ### ✅ 1. `Departments` Table
 
