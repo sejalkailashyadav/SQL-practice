@@ -4,7 +4,7 @@ SQL aggregation function is used to perform the calculations on multiple rows of
 
 ![image](https://user-images.githubusercontent.com/127746039/229786223-d536c148-b30a-4f7b-aace-f0d507508b83.png)
 
-The GROUP BY
+The GROUP
 
 The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
 The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
