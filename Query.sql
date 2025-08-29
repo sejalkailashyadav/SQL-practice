@@ -1,4 +1,4 @@
-# SQL-Practic
+# SQL-Practics
 
 
 INSERT
