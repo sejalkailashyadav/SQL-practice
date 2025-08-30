@@ -1,6 +1,5 @@
 # SQL-Practics
 
-
 INSERT
 
 -- Example: 
