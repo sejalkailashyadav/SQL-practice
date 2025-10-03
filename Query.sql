@@ -1,7 +1,6 @@
 # SQL-Practics
 
 INSERT
-
 -- Example: 
 INSERT INTO Student.student_express(firstname ,lastname,email) VALUES 	('jiya','pal' 'jiya@gmail.com');
 
