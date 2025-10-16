@@ -10,7 +10,6 @@ INSERT INTO Student.student_express(firstname ,lastname,email) VALUES 	('jiya','
 									('tiya','tiwari','tiya@gmail.com'),
 								        ('maya','tejwani','maya@gmail.com');
 
-
 UPDATE : The UPDATE statement is used to modify the existing records in a table. 
 
 -- Note: Be careful when updating records in a table! Notice the WHERE clause in the UPDATE statement. 
