@@ -1,6 +1,4 @@
 # SQL-Practics
-
-	
 INSERT
 	
 -- Example: 
