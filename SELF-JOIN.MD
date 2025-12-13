@@ -1,6 +1,4 @@
-Perfect — you want **practice questions with actual sample tables and data**, not just schema. Let me give you a few full examples (like LeetCode) where solving naturally involves a **self join**
 
----
 ## Question 1: Employees Who Earn More Than Their Manager
 
 **Table: employees**
